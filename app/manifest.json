@@ -1,25 +1,20 @@
 {
-    "name": "youTubes",
+    "name": "Reddit",
     "version": "0.0.2",
     "manifest_version": 2,
     "description": "My First Chrome Extention",
     "icons": {
-        "16": "images/icon-16.png",
+        "16": "images/reddit.png",
         "128": "images/reddit.png"
     },
     "default_locale": "en",
     "background": {
-        "scripts": [
-            "scripts/chromereload.js",
-            "scripts/background.js"
-        ]
+        "scripts": ["popup.js"],
+        "persistent": false
     },
-    "permissions": [
-        "tabs",
-        "history",
-        "http://*/*",
-        "https://*/*"
-    ],
+
+    "permissions": ["<all_urls>"],
+
     "browser_action": {
     "default_icon": "images/reddit.png",
     "default_title": "Reddit",

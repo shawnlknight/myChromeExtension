@@ -1,26 +1,29 @@
 $(document).ready(function(){
 
 
-// $.get( "http://www.reddit.com/.json", function( data ) {
-//   $( ".result" ).html( data );
-//   alert( "Load was performed." );
-// });
+$.getJSON("http://www.reddit.com/.json", function(json) {
+  var post = json.data.children;
+  var reddit = '';
 
-(function() {
-  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-  $.getJSON( flickerAPI, {
-    tags: "mount rainier",
-    tagmode: "any",
-    format: "json"
-  })
-    .done(function( data ) {
-      $.each( data.items, function( i, item ) {
-        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-        if ( i === 3 ) {
-          return false;
-        }
-      });
-    });
-})();
+   for(var i=0, l=post.length; i<l; i++) {
+        var object = post[i].data;
+
+        if(object.thumbnail === 'default' || object.thumbnail === 'nsfw' || object.thumbnail === 'self' || object.thumbnail === '')
+          object.thumbnail = 'images/steve.jpg';
+
+
+        reddit += '<img src="'+object.thumbnail+'" class="thumbImg">\n';
+        reddit += '<div class="linkDetails"><a href="'+object.url+'" target="_blank"><h5>'+object.title+'</h5></a>\n';
+
+      }
+
+
+      // Insert into DOM
+      $(".posts").html(reddit);
+
+
+
+});
+
 
 });

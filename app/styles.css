@@ -1,0 +1,29 @@
+body {
+  min-width: 300px;
+  overflow-x: hidden;
+  background: black;
+
+}
+
+img {
+  margin: 5px;
+  border: 2px solid black;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+}
+
+.linkDetails a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #1994ff;
+}
+
+h2 {
+  font-family: sans-serif;
+  color: white;
+}
+
+h5 {
+  border-bottom: 3px solid white;
+}

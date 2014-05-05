@@ -2,46 +2,21 @@
 <html>
   <head>
     <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        min-width: 357px;
-        overflow-x: hidden;
-      }
+    <link rel="stylesheet" href="styles.css">
 
-      img {
-        margin: 5px;
-        border: 2px solid black;
-        vertical-align: middle;
-        width: 75px;
-        height: 75px;
-      }
-    </style>
 
-    <h2>Reddit</h2>
+    <h2>Reddit Front Page</h2>
     <div class="result"></div>
     <div id="images"></div>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
-     -->
-     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="scripts/popup.js"></script>
-
-    <script type="template/html" id="tasksTmpl">
-    <% _.each(, function(tasks, index , list) { %>
-
-       
-    <% }); %>
-    </script>
-    
   </head>
   <body>
-    <div class="post"></div>
-    I have no clue what I'm doing!
+    <div class="posts"></div>
+    
 
+
+  <script src="lib/jquery-1.11.0.min.js"></script>
+  <script src="scripts/popup.js"></script>
 
   </body>
 </html>
