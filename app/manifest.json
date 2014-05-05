@@ -1,0 +1,28 @@
+{
+    "name": "youTubes",
+    "version": "0.0.2",
+    "manifest_version": 2,
+    "description": "My First Chrome Extention",
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/reddit.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "scripts/chromereload.js",
+            "scripts/background.js"
+        ]
+    },
+    "permissions": [
+        "tabs",
+        "history",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "browser_action": {
+    "default_icon": "images/reddit.png",
+    "default_title": "Reddit",
+    "default_popup": "popup.html"
+  }
+}
