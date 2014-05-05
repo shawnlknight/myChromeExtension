@@ -9,7 +9,7 @@
     },
     "default_locale": "en",
     "background": {
-        "scripts": ["popup.js"],
+        "scripts": ["scripts/popup.js"],
         "persistent": false
     },
 

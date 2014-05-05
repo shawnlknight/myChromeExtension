@@ -13,7 +13,7 @@ $.getJSON("http://www.reddit.com/.json", function(json) {
 
 
         reddit += '<img src="'+object.thumbnail+'" class="thumbImg">\n';
-        reddit += '<div class="linkDetails"><a href="'+object.url+'" target="_blank"><h5>'+object.title+'</h5></a>\n';
+        reddit += '<div class="linkDetails"><a href="'+object.url+'" target="_blank"><div class="title">'+object.title+'</div></a>\n';
 
       }
 

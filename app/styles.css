@@ -1,8 +1,15 @@
 body {
   min-width: 300px;
   overflow-x: hidden;
-  background: black;
+  background: #b9bcbf;
 
+}
+
+h1 {
+  font-family: sans-serif;
+  border: 2px solid black;
+  border-radius: 10%;
+  text-align: center;
 }
 
 img {
@@ -14,16 +21,11 @@ img {
 }
 
 .linkDetails a {
-  text-decoration: none;
-  font-family: sans-serif;
-  color: #1994ff;
+  text-decoration: none; 
 }
 
-h2 {
+.title {
+  border-bottom: 3px solid black;
   font-family: sans-serif;
-  color: white;
-}
-
-h5 {
-  border-bottom: 3px solid white;
+  color: black;
 }
